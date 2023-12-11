@@ -21,9 +21,9 @@ cc.Class({
 
   onLoad() {
     this.content.richText = true;
-    this.content.string = randomParagraph({ sentences: 1 });
-    this.Words = this.content.string.trim().split(/\s+/).filter(word => word.length > 0);
-    console.log(this.Words);
+    let string= randomParagraph({ sentences: 1 });
+    this.Words = string.trim().split(/\s+/).filter(word => word.length > 0);
+    this.content.string= this.Words[this.index]
     this.greenToYellow = 0;
     this.yellowToRed = 0;
     this.correctWords = 0;
@@ -32,9 +32,6 @@ cc.Class({
     this.getPosition(this.Words[this.index]);
   },
   start() {
-
-  },
-  LoadUserData() {
 
   },
   onTextChanged(event) {
@@ -56,6 +53,7 @@ cc.Class({
       this.wrongWords++;
     }
     this.index++;
+    this.content.string= this.Words[this.index];
     this.getPosition(this.Words[this.index]);
   },
   onEnable() {
