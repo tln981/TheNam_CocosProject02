@@ -38,10 +38,17 @@ cc.Class({
     let string = this.inputField.string;
     if (string[string.length - 1] == " ") {
       let value = this.inputField.string.trim();
-      this.inputField.string = '';
-      this.inputField.blur();
-      this.inputField.focus();
-      this.CheckWord(value);
+      if(this.isWait==false){
+        this.inputField.string = '';
+        this.inputField.blur();
+        this.inputField.focus();
+        this.CheckWord(value);
+      }else{
+        this.inputField.string = value;
+        this.inputField.blur();
+        this.inputField.focus();
+      }
+      
     }
   },
   CheckWord(word) {
@@ -95,14 +102,10 @@ cc.Class({
     }
   },
   blockEdittext(){
-    this.inputField.blur();
-    this.inputField.enabled = false;
     this.inputField.node.opacity=100;
   },
   openEditText(){
     this.inputField.node.opacity=255;
-    this.inputField.enabled = true;
-    this.inputField.focus();
   },
   update(dt) {
     if(this.isEnd==true){
@@ -112,8 +115,9 @@ cc.Class({
       }
     }
     if(this.shark.getComponent('Shark').checkAction()){
-      this.isWait=false;
+      
       this.openEditText();
+      this.isWait=false;
     }
     if (this.isStart&&this.isWait==false&&this.isEnd==false) {
       this.timer+=dt;

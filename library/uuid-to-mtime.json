@@ -440,8 +440,8 @@
     "relativePath": "Scene"
   },
   "d05a3b19-87db-4047-bd60-c8f1888fee3a": {
-    "asset": 1702398485966,
-    "meta": 1702398485988,
+    "asset": 1702400917247,
+    "meta": 1702400917267,
     "relativePath": "Scene\\GameScene.fire"
   },
   "325e6f04-2c0a-4bba-aa55-0157d97b389c": {
@@ -584,11 +584,6 @@
     "meta": 1702397889469,
     "relativePath": "Script\\WPMScore.js"
   },
-  "b472d299-0b12-4d1b-8c1d-cbbe8a8971ee": {
-    "asset": 1702398007988,
-    "meta": 1702398009613,
-    "relativePath": "Script\\GameManager.js"
-  },
   "a344aef1-bb69-470c-908b-5af9e6669e1d": {
     "asset": 1702398251038,
     "meta": 1702398290048,
@@ -603,5 +598,10 @@
     "asset": 1702398279962,
     "meta": 1702398290066,
     "relativePath": "Script\\SaveData.js"
+  },
+  "b472d299-0b12-4d1b-8c1d-cbbe8a8971ee": {
+    "asset": 1702400905225,
+    "meta": 1702400908197,
+    "relativePath": "Script\\GameManager.js"
   }
 }

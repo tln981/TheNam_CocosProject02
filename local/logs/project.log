@@ -1,68 +1,154 @@
-2023-12-12T16:33:22.193Z - normal: Load ~/.CocosCreator/settings.json
-2023-12-12T16:33:23.291Z - normal: Initializing Asset Database
-2023-12-12T16:33:23.293Z - normal: checking language setting...
-2023-12-12T16:33:23.293Z - normal: Language: en
-2023-12-12T16:33:23.727Z - success: preview server running at http://localhost:7456
-2023-12-12T16:33:23.729Z - success: protocol editor-framework registered
-2023-12-12T16:33:23.729Z - success: protocol app registered
-2023-12-12T16:33:23.729Z - success: protocol theme registered
-2023-12-12T16:33:23.729Z - success: protocol packages registered
-2023-12-12T16:33:23.729Z - success: protocol uuid registerred
-2023-12-12T16:33:23.729Z - success: protocol db registerred
-2023-12-12T16:33:23.729Z - success: protocol thumbnail registerred
-2023-12-12T16:33:23.729Z - success: protocol unpack registerred
-2023-12-12T16:33:23.729Z - success: protocol disable-commonjs registerred
-2023-12-12T16:33:24.890Z - normal: connected!
-2023-12-12T16:33:24.891Z - normal: Check project D:\Enotion\Cocos\TypingGame
-2023-12-12T16:33:24.893Z - normal: Initializing project D:\Enotion\Cocos\TypingGame
-2023-12-12T16:33:25.135Z - normal: Initializing Cocos2d
-2023-12-12T16:33:25.684Z - normal: Initializing engine extends
-2023-12-12T16:33:25.703Z - success: alipay-adapter loaded
-2023-12-12T16:33:25.706Z - success: asset-db-debugger loaded
-2023-12-12T16:33:25.706Z - success: baidu-adapter loaded
-2023-12-12T16:33:25.707Z - success: color-picker loaded
-2023-12-12T16:33:25.784Z - success: fb-audience-network loaded
-2023-12-12T16:33:25.815Z - success: fb-live-stream loaded
-2023-12-12T16:33:25.817Z - success: google-play-instant loaded
-2023-12-12T16:33:25.820Z - success: huawei-runtime loaded
-2023-12-12T16:33:25.964Z - success: cpk-publish loaded
-2023-12-12T16:33:25.965Z - success: jsb-adapter loaded
-2023-12-12T16:33:25.968Z - success: oppo-runtime loaded
-2023-12-12T16:33:25.970Z - success: package-manager loaded
-2023-12-12T16:33:26.046Z - success: qqplay-adapter loaded
-2023-12-12T16:33:26.047Z - success: runtime-dev-tools loaded
-2023-12-12T16:33:26.050Z - success: sdkbox loaded
-2023-12-12T16:33:26.051Z - success: tester loaded
-2023-12-12T16:33:26.053Z - success: ui-kit-preview-extra loaded
-2023-12-12T16:33:26.053Z - success: ui-kit-preview loaded
-2023-12-12T16:33:26.054Z - success: ui-kit loaded
-2023-12-12T16:33:26.058Z - success: vivo-runtime loaded
-2023-12-12T16:33:26.058Z - success: weapp-adapter loaded
-2023-12-12T16:33:26.058Z - success: xiaomi-adapter loaded
-2023-12-12T16:33:26.060Z - success: alipay-minigame loaded
-2023-12-12T16:33:26.090Z - success: assets loaded
-2023-12-12T16:33:26.091Z - success: builder loaded
-2023-12-12T16:33:26.261Z - success: cocos-services loaded
-2023-12-12T16:33:26.264Z - success: console loaded
-2023-12-12T16:33:26.287Z - success: fb-instant-games loaded
-2023-12-12T16:33:26.289Z - success: game-window loaded
-2023-12-12T16:33:26.290Z - success: google-instant-games loaded
-2023-12-12T16:33:26.292Z - success: hierarchy loaded
-2023-12-12T16:33:26.293Z - success: inspector loaded
-2023-12-12T16:33:26.294Z - success: keystore loaded
-2023-12-12T16:33:26.296Z - success: node-library loaded
-2023-12-12T16:33:26.297Z - success: package-asset loaded
-2023-12-12T16:33:26.297Z - success: preferences loaded
-2023-12-12T16:33:26.298Z - success: project-exporter loaded
-2023-12-12T16:33:26.301Z - success: project-importer loaded
-2023-12-12T16:33:26.302Z - success: project-settings loaded
-2023-12-12T16:33:26.304Z - success: scene loaded
-2023-12-12T16:33:26.305Z - success: simulator-debugger loaded
-2023-12-12T16:33:26.305Z - success: sprite-editor loaded
-2023-12-12T16:33:26.307Z - success: store loaded
-2023-12-12T16:33:26.310Z - success: timeline loaded
-2023-12-12T16:33:26.312Z - success: xiaomi-runtime loaded
-2023-12-12T16:33:27.060Z - normal: Loading packages
-2023-12-12T16:33:27.063Z - normal: Watching packages
-2023-12-12T16:33:27.424Z - normal: Run Application
-2023-12-12T16:33:28.766Z - info: Cocos Services load base data!
+2023-12-12T16:58:42.094Z - normal: Load ~/.CocosCreator/settings.json
+2023-12-12T16:58:43.218Z - normal: Initializing Asset Database
+2023-12-12T16:58:43.220Z - normal: checking language setting...
+2023-12-12T16:58:43.220Z - normal: Language: en
+2023-12-12T16:58:43.958Z - success: preview server running at http://localhost:7456
+2023-12-12T16:58:43.959Z - success: protocol editor-framework registered
+2023-12-12T16:58:43.959Z - success: protocol app registered
+2023-12-12T16:58:43.960Z - success: protocol theme registered
+2023-12-12T16:58:43.960Z - success: protocol packages registered
+2023-12-12T16:58:43.960Z - success: protocol uuid registerred
+2023-12-12T16:58:43.960Z - success: protocol db registerred
+2023-12-12T16:58:43.960Z - success: protocol thumbnail registerred
+2023-12-12T16:58:43.960Z - success: protocol unpack registerred
+2023-12-12T16:58:43.960Z - success: protocol disable-commonjs registerred
+2023-12-12T16:58:45.039Z - normal: connected!
+2023-12-12T16:58:45.040Z - normal: Check project D:\Enotion\Cocos\TypingGame
+2023-12-12T16:58:45.043Z - normal: Initializing project D:\Enotion\Cocos\TypingGame
+2023-12-12T16:58:45.309Z - normal: Initializing Cocos2d
+2023-12-12T16:58:47.696Z - normal: Initializing engine extends
+2023-12-12T16:58:47.716Z - success: alipay-adapter loaded
+2023-12-12T16:58:47.729Z - success: asset-db-debugger loaded
+2023-12-12T16:58:47.737Z - success: baidu-adapter loaded
+2023-12-12T16:58:47.745Z - success: color-picker loaded
+2023-12-12T16:58:47.840Z - success: fb-audience-network loaded
+2023-12-12T16:58:47.890Z - success: fb-live-stream loaded
+2023-12-12T16:58:47.911Z - success: google-play-instant loaded
+2023-12-12T16:58:47.942Z - success: huawei-runtime loaded
+2023-12-12T16:58:48.445Z - success: cpk-publish loaded
+2023-12-12T16:58:48.449Z - success: jsb-adapter loaded
+2023-12-12T16:58:48.473Z - success: oppo-runtime loaded
+2023-12-12T16:58:48.484Z - success: package-manager loaded
+2023-12-12T16:58:48.607Z - success: qqplay-adapter loaded
+2023-12-12T16:58:48.616Z - success: runtime-dev-tools loaded
+2023-12-12T16:58:48.629Z - success: sdkbox loaded
+2023-12-12T16:58:48.641Z - success: tester loaded
+2023-12-12T16:58:48.650Z - success: ui-kit-preview-extra loaded
+2023-12-12T16:58:48.659Z - success: ui-kit-preview loaded
+2023-12-12T16:58:48.668Z - success: ui-kit loaded
+2023-12-12T16:58:48.698Z - success: vivo-runtime loaded
+2023-12-12T16:58:48.702Z - success: weapp-adapter loaded
+2023-12-12T16:58:48.706Z - success: xiaomi-adapter loaded
+2023-12-12T16:58:48.707Z - success: alipay-minigame loaded
+2023-12-12T16:58:48.737Z - success: assets loaded
+2023-12-12T16:58:48.739Z - success: builder loaded
+2023-12-12T16:58:48.924Z - success: cocos-services loaded
+2023-12-12T16:58:48.927Z - success: console loaded
+2023-12-12T16:58:48.951Z - success: fb-instant-games loaded
+2023-12-12T16:58:48.953Z - success: game-window loaded
+2023-12-12T16:58:48.954Z - success: google-instant-games loaded
+2023-12-12T16:58:48.957Z - success: hierarchy loaded
+2023-12-12T16:58:48.959Z - success: inspector loaded
+2023-12-12T16:58:48.960Z - success: keystore loaded
+2023-12-12T16:58:48.962Z - success: node-library loaded
+2023-12-12T16:58:48.962Z - success: package-asset loaded
+2023-12-12T16:58:48.963Z - success: preferences loaded
+2023-12-12T16:58:48.964Z - success: project-exporter loaded
+2023-12-12T16:58:48.966Z - success: project-importer loaded
+2023-12-12T16:58:48.968Z - success: project-settings loaded
+2023-12-12T16:58:48.970Z - success: scene loaded
+2023-12-12T16:58:48.970Z - success: simulator-debugger loaded
+2023-12-12T16:58:48.971Z - success: sprite-editor loaded
+2023-12-12T16:58:48.973Z - success: store loaded
+2023-12-12T16:58:48.975Z - success: timeline loaded
+2023-12-12T16:58:48.977Z - success: xiaomi-runtime loaded
+2023-12-12T16:58:50.476Z - normal: Loading packages
+2023-12-12T16:58:50.481Z - normal: Watching packages
+2023-12-12T16:58:50.758Z - normal: Run Application
+2023-12-12T16:58:52.010Z - info: Cocos Services load base data!
+2023-12-12T17:09:46.633Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\Enotion\\Cocos\\Build\\TypingShark",
+  "debug": false,
+  "dest": "D:\\Enotion\\Cocos\\Build\\TypingShark\\web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.TypingGame",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "d05a3b19-87db-4047-bd60-c8f1888fee3a"
+  ],
+  "sourceMaps": false,
+  "startScene": "d05a3b19-87db-4047-bd60-c8f1888fee3a",
+  "template": "link",
+  "title": "TypingGame",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "0843bd42-a711-45",
+  "zipCompressJs": true,
+  "project": "D:\\Enotion\\Cocos\\TypingGame",
+  "projectName": "TypingGame",
+  "debugBuildWorker": false
+}
+2023-12-12T17:09:46.635Z - normal: Building D:\Enotion\Cocos\TypingGame
+2023-12-12T17:09:46.636Z - normal: Destination D:\Enotion\Cocos\Build\TypingShark\web-mobile
+2023-12-12T17:09:46.760Z - normal: Delete D:\Enotion\Cocos\Build\TypingShark\web-mobile\subpackages/**/*,D:\Enotion\Cocos\Build\TypingShark\web-mobile\**\*
+2023-12-12T17:09:48.662Z - normal: Start building assets
+2023-12-12T17:09:48.663Z - normal: Start spawn build-worker
+2023-12-12T17:09:49.157Z - normal: Finish spawn build-worker
+2023-12-12T17:09:49.157Z - normal: Start init build-worker
+2023-12-12T17:09:51.524Z - normal: Finish init build-worker
+2023-12-12T17:09:51.524Z - normal: Start build-assets in worker
+2023-12-12T17:09:51.853Z - normal: Finish build-assets in worker
+2023-12-12T17:09:51.860Z - normal: Finish building assets
+2023-12-12T17:09:51.870Z - normal: Start building plugin scripts
+2023-12-12T17:09:51.875Z - normal: Generating main.js from C:\CocosCreator_2.1.3\resources\static\build-templates\shares\main.js
+2023-12-12T17:09:51.907Z - normal: Generating html from C:\CocosCreator_2.1.3\resources\static\build-templates\web-mobile\template\index.html
+2023-12-12T17:09:51.919Z - normal: Built to "D:\Enotion\Cocos\Build\TypingShark\web-mobile" successfully
