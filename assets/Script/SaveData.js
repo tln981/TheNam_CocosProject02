@@ -34,7 +34,6 @@ cc.Class({
         this.playerData.imageIndex=this.avatar.getComponent("LoadAtlas").indexAvatar;
         this.jsonString=JSON.stringify(this.playerData);
         cc.sys.localStorage.setItem("playerData",this.jsonString);
-        cc.log(this.jsonString);
     }
     // update (dt) {},
 });

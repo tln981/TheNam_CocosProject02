@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hpframe-removebg-preview_01",
+    "texture": "832c31f8-eacf-4057-9fb1-c32be761ad9c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      200,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      69
+    ],
+    "capInsets": [
+      25,
+      17,
+      23,
+      19
+    ]
+  }
+}

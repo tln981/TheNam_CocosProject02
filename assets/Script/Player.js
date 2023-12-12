@@ -8,11 +8,15 @@ cc.Class({
     },
     onLoad() {
         this.spineboy = this.node.getComponent(sp.Skeleton);
+        this.spineboy.setAnimation(0, "idle", true);
+        this.isDeath=null;
     },
     start() {
+        //this.die(0.5);
     },
-    attack(duration) {
-
+    attack() {
+        this.spineboy.setAnimation(1, 'shoot', false);
+        //this.spineboy.setAnimation(0, "idle", true);
     },
     getHit(duration, damage) {
         this.heath -= damage
@@ -20,19 +24,21 @@ cc.Class({
             this.heath = 0;
             this.die(duration);
         } else {
-            this.node.stopAllActions();
-            let action = cc.spawn(
-                cc.callFunc(() => this.flash(duration)),
-                cc.callFunc(() => {
-                    cc.tween(this.hpBar)
-                        .to(duration, { progress: 0.9 })
-                        .start()
-                }),
-                cc.callFunc(() => {
-                    this.spineboy.setAnimation(0, "death", false);
-                    this.spineboy.addAnimation(0, "idle", false);
-                }),
+            let action = cc.sequence(
+                cc.delayTime(0.7),
+                cc.spawn(
+                    cc.callFunc(() => this.flash(duration)),
+                    cc.callFunc(() => {
+                        cc.tween(this.hpBar)
+                            .to(duration, { progress: this.heath })
+                            .start()
+                    }),
+                    cc.callFunc(() => {
+                        this.spineboy.setAnimation(1, "run-to-idle", false);
+                    }),
+                )
             )
+
             this.node.runAction(action);
         }
     },
@@ -49,12 +55,35 @@ cc.Class({
         ).repeat(3)
         this.node.runAction(action)
     },
-    die(duration){
-        let action= cc.callFunc(() => {
+    die(duration) {
+        this.isDeath = false;
+        let action = cc.callFunc(() => {
             cc.tween(this.hpBar)
-                .to(duration, { progress: 0})
+                .to(duration, { progress: 0 })
+                .call(() => {
+                    this.spineboy.clearTracks();
+                    this.spineboy.setAnimation(0, "death", false);
+                })
                 .start()
         })
-        this.node.runAction(action)
+        this.node.runAction(action);
+
+    },
+    checkDeath() {
+        this.spineboy.setCompleteListener((entry) => {
+            if (entry.animation.name == "death") {
+                return true;
+            }
+            return false;
+        })
+    },
+    update(dt) {
+        if (this.isDeath == false) {
+            this.spineboy.setCompleteListener((entry) => {
+                if (entry.animation.name == "death") {
+                    this.isDeath=true;
+                }
+            })
+        }
     }
 });

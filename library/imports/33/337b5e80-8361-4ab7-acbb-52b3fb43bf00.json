@@ -1,0 +1,53 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "sprites.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "2112.w037.n003.70A.p1.70-removebg-preview_01": {
+      "__uuid__": "e899b1af-f5cb-40f1-bb62-61bd5e8a1890"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_02": {
+      "__uuid__": "6d697bf1-3e5b-4af1-8458-3eecceaabc24"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_03": {
+      "__uuid__": "11c51a8a-4a83-4ae9-9ba8-abdb5ad3bc66"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_04": {
+      "__uuid__": "d6c3309a-bfa2-4701-8126-db30dd75b68d"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_05": {
+      "__uuid__": "544d8c10-0272-48a2-8b32-15e05583c071"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_06": {
+      "__uuid__": "c2130913-5520-4b01-b237-8cdaa87aec85"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_07": {
+      "__uuid__": "b5d47e1d-dba7-419f-a377-186b3527886f"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_08": {
+      "__uuid__": "48425158-d29d-4d04-9122-584a881d8456"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_09": {
+      "__uuid__": "0a157873-1a6e-4b9a-aec2-d93dce75a31f"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_10": {
+      "__uuid__": "18ed0677-e57f-4a9e-8061-a9cf5e9521a0"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_11": {
+      "__uuid__": "b80691c5-d8a5-4328-a04d-47206f9946b3"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_12": {
+      "__uuid__": "97898b40-3980-43ea-a0de-2b4a029cfa99"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_13": {
+      "__uuid__": "071e473e-e2ed-4513-859c-dbeff1b4a2bb"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_14": {
+      "__uuid__": "e3e7573a-05a3-4a9a-af19-2bdd90f31a64"
+    },
+    "2112.w037.n003.70A.p1.70-removebg-preview_15": {
+      "__uuid__": "70821732-9cd5-4e2b-920c-b8c2487f7797"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "2112.w037.n003.70A.p1.70-removebg-preview_10",
+    "texture": "dfe5ce0a-6540-4128-830a-ff39c2d0dd7f",
+    "atlas": "337b5e80-8361-4ab7-acbb-52b3fb43bf00",
+    "rect": [
+      0,
+      276,
+      92,
+      92
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      92,
+      92
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

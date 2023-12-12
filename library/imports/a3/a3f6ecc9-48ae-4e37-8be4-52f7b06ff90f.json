@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "photo_2023-12-04_16-24-39-removebg-preview",
+    "texture": "87eab78d-48dd-4fa0-80a4-940d42d49df1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      62,
+      44
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      62,
+      44
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -21,7 +21,6 @@ cc.Class({
     onLoad () {
       this.spriteFrames = this.avatar.getSpriteFrames();
       this.changeAvatar(this.indexAvatar);
-      console.log("load");
     },
 
     start () {
@@ -42,8 +41,6 @@ cc.Class({
         }else{
            this.indexAvatar=index;
         }
-        console.log(this.node.getComponent(cc.Sprite).spriteFrame);
         this.node.getComponent(cc.Sprite).spriteFrame=this.spriteFrames[index];
-        console.log(this.node.getComponent(cc.Sprite).spriteFrame);
     }
 });

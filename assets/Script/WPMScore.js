@@ -24,10 +24,10 @@ cc.Class({
     start () {
 
     },
-display(correct,wrong){
+display(correct,wrong,time){
 this.correct.string=correct;
 this.wrong.string=wrong;
-this.score.string=correct/1;
+this.score.string=Math.round(correct/(time/60));
 }
     // update (dt) {},
 });

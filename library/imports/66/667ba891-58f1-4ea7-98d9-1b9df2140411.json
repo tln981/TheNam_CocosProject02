@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "health_slide_01",
+    "texture": "4d7f1641-bc0d-496b-840c-11f102d32d11",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      763,
+      229
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      763,
+      229
+    ],
+    "capInsets": [
+      14,
+      24,
+      24,
+      24
+    ]
+  }
+}

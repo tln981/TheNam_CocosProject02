@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "play-removebg-preview",
+    "texture": "f7b778e8-b4b0-43b9-8acd-cef7afe8b13a",
+    "atlas": "",
+    "rect": [
+      13,
+      0,
+      199,
+      225
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      225,
+      225
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

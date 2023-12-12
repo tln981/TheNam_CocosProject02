@@ -4,21 +4,22 @@ cc.Class({
 
   properties: {
     avatar: cc.Sprite,
-    arrow: cc.Node,
     userName: cc.Label,
     content: cc.Label,
     inputField: cc.EditBox,
     index: 0,
-    Cover: cc.Sprite,
-    time: 60,
-    timer: 60,
+    timeAttack: 7,
+    timerShark:0,
+    timer:0,
+    timerPlay: 0,
     isStart: true,
-    timeText: cc.Label,
+    isWait:false,
+    isEnd:false,
     scoreTxt: cc.Label,
-    wpmDisplay: cc.Node
+    wpmDisplay: cc.Node,
+    player:cc.Node,
+    shark:cc.Node
   },
-
-
   onLoad() {
     this.content.richText = true;
     let string= randomParagraph({ sentences: 1 });
@@ -28,8 +29,7 @@ cc.Class({
     this.yellowToRed = 0;
     this.correctWords = 0;
     this.wrongWords = 0;
-    this.scoreTxt.string = "Correct:" + this.correctWords;
-    this.getPosition(this.Words[this.index]);
+    this.scoreTxt.string = "Score:" + this.correctWords;
   },
   start() {
 
@@ -41,22 +41,49 @@ cc.Class({
       this.inputField.string = '';
       this.inputField.blur();
       this.inputField.focus();
-      console.log(this.inputField.string);
       this.CheckWord(value);
     }
   },
   CheckWord(word) {
     if (word == this.Words[this.index]) {
       this.correctWords++;
-      this.scoreTxt.string = "Correct:" + this.correctWords;
+      this.scoreTxt.string = "Score:" + this.correctWords;
+      this.shark.getComponent('Shark').getHit(1);
+      this.player.getComponent('Player').attack();
+      this.shark.getComponent('Shark').engryControl(0.1,0);
+      this.timerShark=0;
+      this.blockEdittext();
+      this.isWait=true;
     } else {
       this.wrongWords++;
+      this.blockEdittext()
+      this.isWait=true;
+      this.shark.getComponent('Shark').attack();
+      this.shark.getComponent('Shark').engryControl(0.1,0);
+      this.player.getComponent('Player').getHit(1,0.1);
+      this.timerShark=0;
+      if(this.player.getComponent('Player').heath<=0){
+        this.player.getComponent('Player').die(1);
+        this.isEnd=true;
+      }
     }
     this.index++;
-    this.content.string= this.Words[this.index];
-    this.getPosition(this.Words[this.index]);
+    if(this.index%5==0&&this.timeAttack>3)this.timeAttack--
+    if(this.index!=this.Words.length){
+        this.content.string= this.Words[this.index];
+    }else{
+      this.blockEdittext();
+      this.isWait=true;
+      this.scoreTxt.string = "Score:" + this.correctWords;
+      this.shark.getComponent('Shark').die(1);
+      this.player.getComponent('Player').attack();
+      this.shark.getComponent('Shark').engryControl(0.1,0);
+      this.isEnd=true;
+      //chiến thắng tính điểm
+    }
   },
   onEnable() {
+    this.inputField.focus();
     this.jsonString = cc.sys.localStorage.getItem("playerData");
     this.jsonData = null;
     if (this.jsonString) {
@@ -67,60 +94,48 @@ cc.Class({
       cc.error("Không thấy data");
     }
   },
-  getPosition(string) {
-    let searchString = string;
-    let labelText = this.content.string;
-    let startIndex = labelText.indexOf(searchString);
-    cc.log(startIndex);
-    let x =10 * startIndex;
-    let y = (10 * startIndex) / 500;
-  
-    if (y > 1) {
-      x = x - y * 500;
-      y
-    }else{
-      y=0;
-    }
-    cc.log("x:", x);
-    cc.log("y:", y);
-    this.arrow.x = x;
-    this.arrow.y = -(Math.floor(y) * 10) + 10;
-    cc.log("Arrow:", this.arrow.position);
+  blockEdittext(){
+    this.inputField.blur();
+    this.inputField.enabled = false;
+    this.inputField.node.opacity=100;
+  },
+  openEditText(){
+    this.inputField.node.opacity=255;
+    this.inputField.enabled = true;
+    this.inputField.focus();
   },
   update(dt) {
-    if (this.isStart) {
-      this.timer -= dt;
-      let ratio = this.timer / this.time;
-      if (ratio > 0.4) {
-        this.greenToYellow += (255 / (0.6 * this.time)) * dt;
-        if (this.greenToYellow > 1) {
-          let newRed = this.Cover.node.color.r + this.greenToYellow;
-          this.Cover.node.color = cc.color(newRed, 255, 0);
-          this.greenToYellow = 0;
-        }
+    if(this.isEnd==true){
+      if(this.player.getComponent('Player').isDeath==true||this.shark.getComponent('Shark').isDeath==true){
+        this.wpmDisplay.active=true;
+        this.wpmDisplay.getComponent('WPMScore').display(this.correctWords,this.wrongWords,this.timerPlay)
       }
-      if (ratio <= 0.4 && this.timer / this.time > 0.1) {
-        this.yellowToRed += (255 / (0.3 * this.time)) * dt;
-        if (this.yellowToRed > 1) {
-          let newGreen = this.Cover.node.color.g - this.yellowToRed;
-          if (newGreen <= 0) {
-            newGreen = 0;
+    }
+    if(this.shark.getComponent('Shark').checkAction()){
+      this.isWait=false;
+      this.openEditText();
+    }
+    if (this.isStart&&this.isWait==false&&this.isEnd==false) {
+      this.timer+=dt;
+      this.timerPlay+=dt;
+      this.timerShark+=dt;
+      if(this.timer>=1){
+        this.timer=0;
+        const alpha=parseFloat((this.timerShark/this.timeAttack).toFixed(1));
+        this.shark.getComponent('Shark').engryControl(0.5,alpha);
+        if(alpha>=1){
+          this.shark.getComponent('Shark').attack();
+          this.player.getComponent('Player').getHit(1,0.1);
+          this.shark.getComponent('Shark').engryControl(0.1,0);
+          if(this.player.getComponent('Player').heath<=0.01){
+            this.player.getComponent('Player').die(1);
+            this.isEnd=true;
           }
-          this.Cover.node.color = cc.color(255, newGreen, 0);
-          this.yellowToRed = 0;
+          this.timerShark=0;
+          this.blockEdittext()
+          this.isWait=true;
         }
       }
-      // if(ratio<=0.1){
-      //     this.Cover.node.color=cc.Color.RED;
-      //  }
-      if (this.timer <= 0) {
-        this.inputField.blur();
-        this.timer = 0;
-        this.isStart = false;
-        this.wpmDisplay.active = true;
-        this.wpmDisplay.getComponent("WPMScore").display(this.correctWords, this.wrongWords);
-      }
-      this.Cover.fillRange = ratio;
     }
   },
 });

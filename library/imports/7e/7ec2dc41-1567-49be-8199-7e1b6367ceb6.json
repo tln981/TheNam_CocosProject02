@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "download-removebg-preview",
+    "texture": "914e368c-aa57-44a5-9246-9df5bd0d20d4",
+    "atlas": "",
+    "rect": [
+      23,
+      23,
+      179,
+      180
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      225,
+      225
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

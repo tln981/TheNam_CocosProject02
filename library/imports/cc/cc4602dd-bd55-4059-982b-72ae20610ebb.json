@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Shark",
+    "texture": "5061942a-1ce5-4fcd-bce2-de899485cd59",
+    "atlas": "",
+    "rect": [
+      3,
+      3,
+      1940,
+      502
+    ],
+    "offset": [
+      -51,
+      2
+    ],
+    "originalSize": [
+      2048,
+      512
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
